@@ -24,6 +24,17 @@
   color: white;
 }
 
+.App-Park {
+  background-color: #14419c;
+  min-height: 50vh;
+}
+
+.Text-Primary{
+  font-size: 50px;
+  line-height: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .App-link {
   color: #61dafb;
 }

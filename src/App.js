@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import HelloWorld from './components/shared/HelloWorld'
 
-function App() {
+function App( {text} ) {
+  const name = 'Park Henri';
+  const [startProject, setStartProject] = useState(false);
+  const activeProject = () => setStartProject(!startProject)
+
   return (
+
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          { text }
+        </p>   
+        <span>by: { name }</span>
+        <button onClick={activeProject} style={{margin: '30px'}}>
+          {startProject ? 'Desativar Hello World' : 'Chamar Hello World'}          
+        </button>
+        {startProject ? <HelloWorld /> : null}
       </header>
     </div>
   );
